@@ -2,30 +2,27 @@ import * as React from "react"
 import { useState, useEffect } from 'react'
 
 import Layout from '../components/layout/layout'
+import CardList from '../components/general/CardList'
+
 import "antd/dist/antd.css"
+
 
 const Profiles = () => {
     const [pokemon, setPokemon] = useState()
+    const [filter, setFilter] = useState()
 
     useEffect (() => {
-        fetch("https://pokeapi.co/api/v2/pokemon")
+        fetch("https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json")
         .then(response => response.json())
-        .then(allPokemon => setPokemon(allPokemon.results))
+        .then(allPokemon => setPokemon(allPokemon.pokemon))
     }, [])
 
     return (
             <Layout>
                 <h2>Pokemon List</h2>
-                {pokemon && pokemon.map((poke) => {
-                return (
-                    <>
-                    <p>{poke.name}</p>
-                    <p>{poke.url}</p>
-                    </>
-                )
-                })}
+                <CardList data={pokemon} />
             </Layout>
     )
 }
 
-export default Profiles
+export default Profiles;

@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
-import { Menu, Row } from 'antd';
+import { Menu } from 'antd';
 
 import ThemeSwitch from '../general/ThemeSwitch'
 

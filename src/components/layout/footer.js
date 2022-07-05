@@ -23,7 +23,7 @@ const footerCol = [
         <Row>
             {footerCol.map(item => {
                 return (
-                    <Col className="m-2"span={24 / columnCount}>
+                    <Col key={item.key} className="m-2"span={24 / columnCount}>
                         <Row>
                             <h4>{item.label}</h4>
                         </Row>
