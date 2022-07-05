@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Skyrider`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Skyrider: Trop to Exo`,
+    siteUrl: `https://skyrider.gtsb.io/`
   },
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
